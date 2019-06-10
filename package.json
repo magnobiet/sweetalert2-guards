@@ -1,6 +1,6 @@
 {
-  "name": "@sweetalert2/guards",
-  "version": "0.0.0",
+  "name": "@magno/sweetalert2-guards",
+  "version": "1.0.0",
   "description": "",
   "keywords": [],
   "main": "dist/sweetalert2-guards.umd.js",
@@ -10,6 +10,9 @@
     "dist"
   ],
   "author": "Morgan Touverey Quilling <mtouverey@methodinthemadness.eu>",
+  "contributors": [
+    "Magno Fernando Brixnet Biét <magno.biet@gmail.com>"
+  ],
   "license": "MIT",
   "scripts": {
     "lint": "tslint -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",

@@ -70,7 +70,7 @@ Resulting in:
 Install _@sweetalert2/guards_ and _sweetalert2_ via the npm registry:
 
 ```bash
-npm install --save sweetalert2 @sweetalert2/guards@1.0.0-alpha
+npm install --save sweetalert2 @magno/sweetalert2-guards
 ```
 
  - [x] **TypeScript**: *Guards* is written in TypeScript – type definitions are bundled in the package.
