@@ -1,5 +1,5 @@
 import Swal from 'sweetalert2';
-import { errorStrategy, GuardOptions, invokeStrategy, onDismiss, onError, onSuccess } from './decorator_options';
+import { errorStrategy, GuardOptions, invokeStrategy, onDismiss, onError, onSuccess } from './options';
 
 export type VariadicThunk<TResult = any> = (...args: any[]) => TResult;
 

@@ -1,7 +1,7 @@
 import Swal from 'sweetalert2';
-import { makeDecorator, normalizeDecoratorArguments } from './decorator_factory';
-import { GuardOptions } from './decorator_options';
-import { MaybeVariadicThunk } from './decorator_runtime';
+import { makeDecorator, normalizeDecoratorArguments } from '../factory';
+import { GuardOptions } from '../options';
+import { MaybeVariadicThunk } from '../runtime';
 
 export function Loader(
     titleOrOptions: string | MaybeVariadicThunk<GuardOptions>,

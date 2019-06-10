@@ -1,5 +1,5 @@
-import { GuardOptions } from './decorator_options';
-import { createGuardMethod, MaybeVariadicThunk, VariadicThunk } from './decorator_runtime';
+import { GuardOptions } from './options';
+import { createGuardMethod, MaybeVariadicThunk, VariadicThunk } from './runtime';
 
 export type SweetAlertDecorator =
     | ((options: MaybeVariadicThunk<GuardOptions>) => MethodDecorator)

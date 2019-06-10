@@ -8,8 +8,8 @@ describe('index', () => {
                 'guard',
                 'Alert',
                 'Confirm',
-                'ErrorStrategy',
-                'Loader'
+                'Loader',
+                'ErrorStrategy'
             ]);
         });
     });

@@ -1,7 +1,7 @@
-import * as guardOptions from './decorator_options';
+import * as guardOptions from './options';
 
-export * from './alert_decorator';
-export * from './confirm_decorator';
-export { ErrorStrategy } from './decorator_runtime';
-export * from './loader_decorator';
+export * from './decorators/alert.decorator';
+export * from './decorators/confirm.decorator';
+export * from './decorators/loader.decorator';
+export { ErrorStrategy } from './runtime';
 export { guardOptions as guard };

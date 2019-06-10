@@ -1,5 +1,5 @@
-import { makeDecorator, normalizeDecoratorArguments } from '../src/decorator_factory';
-import { GuardOptions } from '../src/decorator_options';
+import { makeDecorator, normalizeDecoratorArguments } from '../src/factory';
+import { GuardOptions } from '../src/options';
 
 describe('decorator_factory', () => {
     describe(normalizeDecoratorArguments.name, () => {
