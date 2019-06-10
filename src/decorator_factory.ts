@@ -5,10 +5,10 @@ export type SweetAlertDecorator =
     | ((options: MaybeVariadicThunk<GuardOptions>) => MethodDecorator)
     | ((title: string, text: string, options?: MaybeVariadicThunk<GuardOptions>) => MethodDecorator);
 
-// tslint:disable-next-line:ban-types
 export function makeDecorator(
     decorator: SweetAlertDecorator,
-    options: VariadicThunk<GuardOptions>): MethodDecorator {
+    options: VariadicThunk<GuardOptions>
+): MethodDecorator {
 
     return (target: object, propertyKey: string | symbol, descriptor: TypedPropertyDescriptor<any>) => {
         //=> Runtime check: if descriptor.value isn't set, then the decorator isn't being used on a method
@@ -20,11 +20,13 @@ export function makeDecorator(
         //=> Wrap the original method implementation
         descriptor.value = createGuardMethod(descriptor.value, options);
     };
+
 }
 
 export function normalizeDecoratorArguments(
     args: IArguments | any[],
-    defaults?: GuardOptions): VariadicThunk<GuardOptions> {
+    defaults?: GuardOptions
+): VariadicThunk<GuardOptions> {
 
     if (args.length === 1) {
         const options = args[0];

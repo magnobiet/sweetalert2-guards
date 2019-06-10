@@ -32,7 +32,7 @@ import { guard, Confirm, ErrorStrategy } from '@sweetalert2/guards';
 }))
 public async deleteFile(file: string) {
     const response = await fetch(`/api/files/${file}`, { method: 'delete' });
-    
+
     if (!response.ok) {
         throw new Error(`An error occurred: ${response.statusText}`);
     }
@@ -81,9 +81,9 @@ npm install --save sweetalert2 @sweetalert2/guards@1.0.0-alpha
 
 
 ## :link: API
- 
+
 ### `@Alert()` Guard
- 
+
 This decorator is the simplest one. It will display an alert before your method executes, show a loading indicator when it's executing, and that's all.
 
 <details>
@@ -98,7 +98,7 @@ This decorator is the simplest one. It will display an alert before your method 
 ```
 </details>
 <br>
- 
+
 ```ts
 @Alert({
     title: 'Downloading the Internet',
@@ -119,7 +119,7 @@ public downloadTheInternet() {
 <br>
 
 ### `@Confirm()` Guard
- 
+
 This decorator will show a confirmation dialog with _Confirm_ and _Cancel_ buttons. The user may choose to execute the decorated method or not.
 
 <details>
@@ -136,7 +136,7 @@ This decorator will show a confirmation dialog with _Confirm_ and _Cancel_ butto
 ```
 </details>
 <br>
- 
+
 ```ts
 @Confirm({
     title: 'Close account?',
@@ -155,7 +155,7 @@ public closeMyAccount() {
 <br>
 
 ### `@Loader()` Guard
- 
+
 This decorator will execute the decorated method as soon as it's called, showing a loading indicator while the method is executing.
 
 <details>
@@ -172,7 +172,7 @@ This decorator will execute the decorated method as soon as it's called, showing
 ```
 </details>
 <br>
- 
+
 ```ts
 @Loader({
     title: 'Please wait',
@@ -224,7 +224,7 @@ public async syncDataFromApi() {
 </details>
 
 
-## :stew: Recipes 
+## :stew: Recipes
 
 #### :grey_question: Q0: How to change the modal's parameters depending on the method's arguments?
 

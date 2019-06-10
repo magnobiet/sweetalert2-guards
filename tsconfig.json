@@ -2,8 +2,11 @@
   "compilerOptions": {
     "moduleResolution": "node",
     "target": "es5",
-    "module":"es2015",
-    "lib": ["es2017", "dom"],
+    "module": "es2015",
+    "lib": [
+      "es2017",
+      "dom"
+    ],
     "strict": true,
     "noUnusedLocals": true,
     "sourceMap": true,
@@ -14,5 +17,7 @@
     "declarationDir": "dist/lib",
     "outDir": "dist/es"
   },
-  "include": ["src"]
+  "include": [
+    "src"
+  ]
 }

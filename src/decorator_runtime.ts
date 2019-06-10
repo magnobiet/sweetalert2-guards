@@ -1,4 +1,4 @@
-import swal, { SweetAlertDismissReason } from 'sweetalert2';
+import Swal from 'sweetalert2';
 import { errorStrategy, GuardOptions, invokeStrategy, onDismiss, onError, onSuccess } from './decorator_options';
 
 export type VariadicThunk<TResult = any> = (...args: any[]) => TResult;
@@ -7,7 +7,8 @@ export type MaybeVariadicThunk<T = any> = T | VariadicThunk<T>;
 
 export function createGuardMethod(
     wrappedMethod: VariadicThunk,
-    optionsGetter: VariadicThunk<GuardOptions>): VariadicThunk<Promise<any>> {
+    optionsGetter: VariadicThunk<GuardOptions>
+): VariadicThunk<Promise<any>> {
 
     return async function(this: any, ...args: any[]) {
         //=> Build alert options
@@ -17,7 +18,7 @@ export function createGuardMethod(
             [errorStrategy]: ErrorStrategy.die,
             [onDismiss]: onDismissReject,
             [onError]: () => { /* noop */ },
-            [onSuccess]:  () => { /* noop */ },
+            [onSuccess]: () => { /* noop */ },
 
             //=> Merge with consumer options
             ...optionsGetter(...args),
@@ -46,7 +47,7 @@ export function createGuardMethod(
 
         try {
             //=> Show the alert
-            const { value, dismiss } = await swal(options);
+            const { value, dismiss } = await Swal.fire(options);
 
             if (dismiss) {
                 //=> Call dismiss handler
@@ -75,7 +76,7 @@ export class ErrorStrategy {
     public static validationError(err: any): void {
         const message = err instanceof Error ? err.message : err.toString();
 
-        swal.showValidationError(message);
+        Swal.showValidationMessage(message);
     }
 }
 
@@ -83,6 +84,6 @@ function onInvokePassOriginalArguments(originalArguments: any[]): any[] {
     return originalArguments;
 }
 
-function onDismissReject(dismiss: SweetAlertDismissReason): void {
+function onDismissReject(dismiss: Swal.DismissReason): void {
     throw new Error(`SweetAlert2 Guard didn't execute method: modal was dismissed (${dismiss})`);
 }
