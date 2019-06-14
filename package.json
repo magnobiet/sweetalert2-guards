@@ -1,6 +1,6 @@
 {
   "name": "@magno/sweetalert2-guards",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "keywords": [],
   "main": "dist/sweetalert2-guards.umd.js",
