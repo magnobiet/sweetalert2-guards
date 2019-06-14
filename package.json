@@ -1,7 +1,7 @@
 {
   "name": "@magno/sweetalert2-guards",
-  "version": "1.0.1",
-  "description": "",
+  "version": "1.0.2",
+  "description": "SweetAlert2 Guards are a simple, opinionated solution to elegantly wrap your JavaScript methods execution in alerts, without having to mix UI and logic code.",
   "keywords": [],
   "main": "dist/sweetalert2-guards.umd.js",
   "module": "dist/sweetalert2-guards.es5.js",
@@ -59,5 +59,16 @@
   },
   "dependencies": {
     "sweetalert2": "^8.12.1"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magnobiet/sweetalert2-guards.git"
+  },
+  "bugs": {
+    "url": "https://github.com/magnobiet/sweetalert2-guards/issues"
+  },
+  "homepage": "https://github.com/magnobiet/sweetalert2-guards#readme"
 }
